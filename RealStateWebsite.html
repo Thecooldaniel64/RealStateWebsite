@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terrenos Premium en Rosarito - María Rodríguez</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        .heart-icon:hover {
+            fill: #ef4444;
+            color: #ef4444;
+        }
+
+        .heart-icon.active {
+            fill: #ef4444;
+            color: #ef4444;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-white">
+    <!-- Hero Section -->
+    <div class="relative bg-gradient-to-br from-green-600 to-green-800 text-white">
+        <div class="absolute inset-0 bg-black/20"></div>
+        
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
+            <div class="text-center">
+                <div class="flex justify-center mb-6">
+                    <div class="bg-white/10 backdrop-blur-sm p-4 rounded-full">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                    </div>
+                </div>
+                
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
+                    Terrenos Premium en Rosarito
+                </h1>
+                
+                <p class="text-xl sm:text-2xl text-green-100 max-w-3xl mx-auto mb-8">
+                    Tu socio de confianza para propiedades costeras excepcionales en Baja California
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button class="bg-white text-green-600 font-semibold px-8 py-3 rounded-lg hover:bg-green-50 transition-colors">
+                        Ver Propiedades
+                    </button>
+                    <button class="bg-green-700 text-white font-semibold px-8 py-3 rounded-lg hover:bg-green-800 transition-colors border border-green-500">
+                        Contáctame
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Seller Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1763479169474-728a7de108c3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjByZWFsdG9yfGVufDF8fHx8MTc2ODk1ODA2MXww&ixlib=rb-4.1.0&q=80&w=1080"
+                        alt="Real Estate Agent"
+                        class="rounded-2xl shadow-2xl w-full h-[500px] object-cover">
+                </div>
+
+                <div>
+                    <h2 class="text-4xl sm:text-5xl font-bold mb-6">
+                        Conoce a tu Experta en Bienes Raíces
+                    </h2>
+                    
+                    <div class="mb-6">
+                        <h3 class="text-2xl font-bold text-green-700 mb-2">María Rodríguez</h3>
+                        <p class="text-lg text-gray-600">Agente Inmobiliaria Certificada</p>
+                    </div>
+
+                    <p class="text-gray-700 text-lg mb-6 leading-relaxed">
+                        Con más de 15 años de experiencia en el mercado inmobiliario de Rosarito, me especializo en 
+                        conectar compradores internacionales con oportunidades premium de terrenos costeros. Mi profundo 
+                        conocimiento de la región, combinado con un compromiso de servicio personalizado, asegura que 
+                        cada cliente encuentre la propiedad perfecta para su visión.
+                    </p>
+
+                    <p class="text-gray-700 text-lg mb-8 leading-relaxed">
+                        He ayudado a cientos de familias e inversionistas a descubrir la belleza y el potencial de la 
+                        costa de Rosarito. Desde parcelas frente al mar hasta lotes en colinas con vistas panorámicas 
+                        al océano, guío a mis clientes a través de cada paso del proceso de adquisición con transparencia 
+                        y experiencia.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="bg-green-50 p-6 rounded-xl">
+                            <div class="bg-green-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                                <svg class="w-6 h-6 text-green-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+                                </svg>
+                            </div>
+                            <h4 class="text-3xl font-bold text-green-700 mb-1">15+</h4>
+                            <p class="text-gray-600">Años de Experiencia</p>
+                        </div>
+
+                        <div class="bg-green-50 p-6 rounded-xl">
+                            <div class="bg-green-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                                <svg class="w-6 h-6 text-green-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                                </svg>
+                            </div>
+                            <h4 class="text-3xl font-bold text-green-700 mb-1">500+</h4>
+                            <p class="text-gray-600">Clientes Satisfechos</p>
+                        </div>
+
+                        <div class="bg-green-50 p-6 rounded-xl">
+                            <div class="bg-green-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                                <svg class="w-6 h-6 text-green-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+                                </svg>
+                            </div>
+                            <h4 class="text-3xl font-bold text-green-700 mb-1">200+</h4>
+                            <p class="text-gray-600">Propiedades Vendidas</p>
+                        </div>
+
+                        <div class="bg-green-50 p-6 rounded-xl">
+                            <div class="bg-green-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                                <svg class="w-6 h-6 text-green-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                                </svg>
+                            </div>
+                            <h4 class="text-3xl font-bold text-green-700 mb-1">98%</h4>
+                            <p class="text-gray-600">Satisfacción del Cliente</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rosarito Lands Section -->
+    <section class="py-20 bg-gradient-to-b from-green-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <div class="inline-flex items-center gap-2 bg-green-100 text-green-700 px-4 py-2 rounded-full mb-4">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    </svg>
+                    <span class="font-medium">Rosarito, Baja California</span>
+                </div>
+                
+                <h2 class="text-4xl sm:text-5xl font-bold mb-6">
+                    Descubre los Terrenos Premium de Rosarito
+                </h2>
+                
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    Ubicado a solo 20 minutos al sur de la frontera Estados Unidos-México, Rosarito ofrece la 
+                    combinación perfecta de belleza natural, accesibilidad y potencial de inversión. Con su clima 
+                    templado, impresionante costa y creciente infraestructura, Rosarito se está convirtiendo en uno 
+                    de los destinos más codiciados de Baja California.
+                </p>
+            </div>
+
+            <div class="mb-16">
+                <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12">
+                    <h3 class="text-3xl font-bold mb-6">¿Por Qué Invertir en Rosarito?</h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-green-100 p-2 rounded-lg flex-shrink-0">
+                                <svg class="w-6 h-6 text-green-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-semibold mb-2">Ubicación Estratégica</h4>
+                                <p class="text-gray-600">
+                                    A solo 30 km de San Diego con fácil acceso de cruce fronterizo, perfecto para vivir e invertir entre fronteras.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="bg-green-100 p-2 rounded-lg flex-shrink-0">
+                                <svg class="w-6 h-6 text-green-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-semibold mb-2">Clima Durante Todo el Año</h4>
+                                <p class="text-gray-600">
+                                    Clima mediterráneo con más de 300 días soleados al año y temperaturas templadas de 15-25°C.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="bg-green-100 p-2 rounded-lg flex-shrink-0">
+                                <svg class="w-6 h-6 text-green-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-semibold mb-2">Infraestructura en Crecimiento</h4>
+                                <p class="text-gray-600">
+                                    Desarrollo continuo de carreteras, servicios públicos y amenidades, con nuevos centros comerciales y restaurantes.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="bg-green-100 p-2 rounded-lg flex-shrink-0">
+                                <svg class="w-6 h-6 text-green-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-semibold mb-2">Plusvalía de Inversión</h4>
+                                <p class="text-gray-600">
+                                    Las propiedades costeras han mostrado una plusvalía constante del 8-12% anual, con fuerte demanda de rentas.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="bg-green-100 p-2 rounded-lg flex-shrink-0">
+                                <svg class="w-6 h-6 text-green-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-semibold mb-2">Estilo de Vida Playero</h4>
+                                <p class="text-gray-600">
+                                    Kilómetros de playas prístinas perfectas para surfear, nadar y relajarse con una cultura local vibrante.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="bg-green-100 p-2 rounded-lg flex-shrink-0">
+                                <svg class="w-6 h-6 text-green-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-semibold mb-2">Lujo Accesible</h4>
+                                <p class="text-gray-600">
+                                    Propiedades frente al mar a una fracción de los precios de California, ofreciendo valor excepcional y calidad de vida.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-3xl font-bold text-center mb-12">Tipos de Terrenos Disponibles</h3>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <!-- Beachfront Parcels -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow">
+                        <div class="relative h-64">
+                            <img src="https://images.unsplash.com/photo-1608606009359-3e10ee361ef6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyb3Nhcml0byUyMGJlYWNoJTIwbWV4aWNvfGVufDF8fHx8MTc2ODk1ODA2MHww&ixlib=rb-4.1.0&q=80&w=1080"
+                                alt="Parcelas Frente al Mar"
+                                class="w-full h-full object-cover">
+                            <div class="absolute top-4 left-4 bg-green-600 text-white p-3 rounded-lg">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5"></path>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <div class="p-6">
+                            <h4 class="text-2xl font-bold mb-3">Parcelas Frente al Mar</h4>
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                Acceso directo a la prístina costa del Pacífico con impresionantes vistas al océano. Perfecto para construir la casa de playa de tus sueños o un hotel boutique.
+                            </p>
+
+                            <div class="space-y-2 mb-6">
+                                <div class="flex items-center gap-2">
+                                    <svg class="w-4 h-4 text-green-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                    <span class="text-sm text-gray-700">Frente al océano</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <svg class="w-4 h-4 text-green-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                    <span class="text-sm text-gray-700">Playas de arena</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <svg class="w-4 h-4 text-green-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                    <span class="text-sm text-gray-700">Vistas al atardecer</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <svg class="w-4 h-4 text-green-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                    <span class="text-sm text-gray-700">Alto potencial ROI</span>
+                                </div>
+                            </div>
+
+                            <button class="w-full bg-green-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-green-700 transition-colors">
+                                Conoce Más
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Hillside Lots -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow">
+                        <div class="relative h-64">
+                            <img src="https://images.unsplash.com/photo-1668899379872-ac2f73c8b020?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxvY2VhbiUyMHZpZXclMjBsYW5kfGVufDF8fHx8MTc2ODk1ODA2MXww&ixlib=rb-4.1.0&q=80&w=1080"
+                                alt="Lotes en Colina"
+                                class="w-full h-full object-cover">
+                            <div class="absolute top-4 left-4 bg-green-600 text-white p-3 rounded-lg">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <div class="p-6">
+                            <h4 class="text-2xl font-bold mb-3">Lotes en Colina</h4>
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                Propiedades elevadas que ofrecen vistas panorámicas del Océano Pacífico y valles circundantes. Ideal para desarrollo residencial de lujo.
+                            </p>
+
+                            <div class="space-y-2 mb-6">
+                                <div class="flex items-center gap-2">
+                                    <svg class="w-4 h-4 text-green-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                    <span class="text-sm text-gray-700">Vistas panorámicas</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <svg class="w-4 h-4 text-green-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                    <span class="text-sm text-gray-700">Privacidad y exclusividad</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <svg class="w-4 h-4 text-green-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                    <span class="text-sm text-gray-700">Terreno natural</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <svg class="w-4 h-4 text-green-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                    <span class="text-sm text-gray-700">Valor de inversión</span>
+                                </div>
+                            </div>
+
+                            <button class="w-full bg-green-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-green-700 transition-colors">
+                                Conoce Más
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Development Land -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow">
+                        <div class="relative h-64">
+                            <img src="https://images.unsplash.com/photo-1768585985311-73cf1b78b3d7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb2FzdGFsJTIwcHJvcGVydHl8ZW58MXx8fHwxNzY4OTAzNDAwfDA&ixlib=rb-4.1.0&q=80&w=1080"
+                                alt="Terrenos de Desarrollo"
+                                class="w-full h-full object-cover">
+                            <div class="absolute top-4 left-4 bg-green-600 text-white p-3 rounded-lg">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <div class="p-6">
+                            <h4 class="text-2xl font-bold mb-3">Terrenos de Desarrollo</h4>
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                Grandes parcelas adecuadas para proyectos de desarrollo comercial o residencial. Ubicaciones estratégicas cerca de vías principales.
+                            </p>
+
+                            <div class="space-y-2 mb-6">
+                                <div class="flex items-center gap-2">
+                                    <svg class="w-4 h-4 text-green-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                    <span class="text-sm text-gray-700">Grandes extensiones</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <svg class="w-4 h-4 text-green-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                    <span class="text-sm text-gray-700">Flexibilidad de zonificación</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <svg class="w-4 h-4 text-green-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                    <span class="text-sm text-gray-700">Acceso a servicios</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <svg class="w-4 h-4 text-green-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                    <span class="text-sm text-gray-700">Potencial comercial</span>
+                                </div>
+                            </div>
+
+                            <button class="w-full bg-green-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-green-700 transition-colors">
+                                Conoce Más
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl sm:text-5xl font-bold mb-4">Historias de Éxito de Clientes</h2>
+                <p class="text-xl text-gray-600">
+                    Mira lo que mis clientes dicen sobre su experiencia
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-green-50 rounded-xl p-8 relative">
+                    <div class="absolute top-6 right-6 text-green-200">
+                        <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                        </svg>
+                    </div>
+
+                    <div class="flex gap-1 mb-4">
+                        <svg class="w-5 h-5 fill-green-500 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <svg class="w-5 h-5 fill-green-500 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <svg class="w-5 h-5 fill-green-500 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <svg class="w-5 h-5 fill-green-500 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <svg class="w-5 h-5 fill-green-500 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        "María nos ayudó a encontrar la propiedad frente al mar perfecta en Rosarito. Su conocimiento del área y profesionalismo hicieron que todo el proceso fuera fluido y sin estrés. ¡Ahora tenemos la casa de vacaciones de nuestros sueños!"
+                    </p>
+
+                    <div>
+                        <p class="font-semibold text-gray-900">John & Sarah Mitchell</p>
+                        <p class="text-sm text-gray-600">San Diego, CA</p>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-green-50 rounded-xl p-8 relative">
+                    <div class="absolute top-6 right-6 text-green-200">
+                        <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                        </svg>
+                    </div>
+
+                    <div class="flex gap-1 mb-4">
+                        <svg class="w-5 h-5 fill-green-500 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <svg class="w-5 h-5 fill-green-500 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <svg class="w-5 h-5 fill-green-500 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <svg class="w-5 h-5 fill-green-500 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <svg class="w-5 h-5 fill-green-500 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        "¡Excelente servicio! María entendió exactamente lo que buscaba en una propiedad de inversión. Su experiencia en el mercado local y atención al detalle superó mis expectativas."
+                    </p>
+
+                    <div>
+                        <p class="font-semibold text-gray-900">Carlos Hernández</p>
+                        <p class="text-sm text-gray-600">Tijuana, BC</p>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-green-50 rounded-xl p-8 relative">
+                    <div class="absolute top-6 right-6 text-green-200">
+                        <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                        </svg>
+                    </div>
+
+                    <div class="flex gap-1 mb-4">
+                        <svg class="w-5 h-5 fill-green-500 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <svg class="w-5 h-5 fill-green-500 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <svg class="w-5 h-5 fill-green-500 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <svg class="w-5 h-5 fill-green-500 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <svg class="w-5 h-5 fill-green-500 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        "Trabajar con María fue un placer. Nos guió en cada paso de la compra de terreno en México, asegurándose de que entendiéramos todos los aspectos legales. ¡Altamente recomendada!"
+                    </p>
+
+                    <div>
+                        <p class="font-semibold text-gray-900">Jennifer Wong</p>
+                        <p class="text-sm text-gray-600">Los Ángeles, CA</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="bg-green-50 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <h2 class="text-3xl sm:text-4xl font-bold mb-6">Ponte en Contacto</h2>
+                    <p class="text-gray-600 mb-8">
+                        ¿Listo para explorar las mejores oportunidades de terrenos en Rosarito? Contáctame hoy 
+                        para una consulta personalizada y descubre cómo puedo ayudarte a encontrar tu propiedad 
+                        costera perfecta.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-green-100 p-3 rounded-lg">
+                                <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold mb-1">Teléfono</h3>
+                                <p class="text-gray-600">+52 (664) 123-4567</p>
+                                <p class="text-gray-600">+1 (619) 987-6543</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="bg-green-100 p-3 rounded-lg">
+                                <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold mb-1">Correo Electrónico</h3>
+                                <p class="text-gray-600">maria@rosaritolanding.com</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="bg-green-100 p-3 rounded-lg">
+                                <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold mb-1">Oficina</h3>
+                                <p class="text-gray-600">Blvd. Benito Juárez 2500<br>Rosarito, Baja California, México</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="bg-green-100 p-3 rounded-lg">
+                                <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold mb-1">Horario</h3>
+                                <p class="text-gray-600">Lun - Vie: 9:00 AM - 6:00 PM<br>Sáb: 10:00 AM - 4:00 PM<br>Dom: Con cita previa</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <h3 class="text-2xl font-bold mb-6">Agenda una Consulta</h3>
+                    <form class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Nombre</label>
+                            <input type="text" placeholder="Tu nombre" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none">
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Correo Electrónico</label>
+                            <input type="email" placeholder="tu@email.com" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none">
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Teléfono</label>
+                            <input type="tel" placeholder="+1 (555) 123-4567" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none">
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Interesado En</label>
+                            <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none">
+                                <option>Parcelas Frente al Mar</option>
+                                <option>Lotes en Colina</option>
+                                <option>Terrenos de Desarrollo</option>
+                                <option>Consulta General</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Mensaje</label>
+                            <textarea rows="4" placeholder="Cuéntame sobre tu propiedad ideal..." class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none resize-none"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-green-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-green-700 transition-colors">
+                            Enviar Mensaje
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
