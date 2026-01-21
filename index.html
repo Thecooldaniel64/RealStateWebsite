@@ -25,6 +25,15 @@
             fill: #ef4444;
             color: #ef4444;
         }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Ajuste para que el scroll no quede tapado por el contenido */
+        section[id], footer[id] {
+            scroll-margin-top: 20px;
+        }
     </style>
 </head>
 <body class="min-h-screen bg-white">
@@ -52,12 +61,15 @@
                 </p>
 
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <button class="bg-white text-green-600 font-semibold px-8 py-3 rounded-lg hover:bg-green-50 transition-colors">
+                    <!-- Botón Ver Propiedades - hace scroll a la sección de tipos de terrenos -->
+                    <a href="#tipos-terrenos" class="bg-white text-green-600 font-semibold px-8 py-3 rounded-lg hover:bg-green-50 transition-colors text-center">
                         Ver Propiedades
-                    </button>
-                    <button class="bg-green-700 text-white font-semibold px-8 py-3 rounded-lg hover:bg-green-800 transition-colors border border-green-500">
+                    </a>
+                    
+                    <!-- Botón Contáctame - hace scroll al footer con formulario -->
+                    <a href="#contacto" class="bg-green-700 text-white font-semibold px-8 py-3 rounded-lg hover:bg-green-800 transition-colors border border-green-500 text-center">
                         Contáctame
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -259,7 +271,8 @@
                 </div>
             </div>
 
-            <div>
+            <!-- Sección de Tipos de Terrenos - ID agregado aquí -->
+            <div id="tipos-terrenos">
                 <h3 class="text-3xl font-bold text-center mb-12">Tipos de Terrenos Disponibles</h3>
                 
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -545,8 +558,8 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section class="bg-green-50 py-16">
+    <!-- Contact Section - ID agregado aquí -->
+    <section id="contacto" class="bg-green-50 py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
                 <div>
