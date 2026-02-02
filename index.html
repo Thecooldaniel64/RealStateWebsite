@@ -75,6 +75,247 @@
         </div>
     </div>
 
+    
+    <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botón WhatsApp</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* CONTENEDOR DEL BOTÓN */
+        .whatsapp-container {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            z-index: 9999;
+        }
+        
+        /* BOTÓN PRINCIPAL - GRANDE PARA MÓVIL */
+        .whatsapp-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(145deg, #25D366, #128C7E);
+            border-radius: 50%;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
+            animation: pulse 2s infinite;
+        }
+        
+        /* ICONO */
+        .whatsapp-btn i {
+            font-size: 36px;
+            color: white;
+            transition: transform 0.3s;
+        }
+        
+        /* BURBUJA DE TEXTO (OPCIONAL) */
+        .whatsapp-text {
+            position: absolute;
+            right: 80px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: white;
+            color: #075E54;
+            padding: 12px 18px;
+            border-radius: 30px;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            font-size: 15px;
+            white-space: nowrap;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+        }
+        
+        .whatsapp-text:after {
+            content: '';
+            position: absolute;
+            right: -8px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 0;
+            height: 0;
+            border-top: 8px solid transparent;
+            border-bottom: 8px solid transparent;
+            border-left: 8px solid white;
+        }
+        
+        /* EFECTOS HOVER */
+        .whatsapp-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
+        }
+        
+        .whatsapp-btn:hover i {
+            transform: rotate(10deg);
+        }
+        
+        .whatsapp-btn:hover .whatsapp-text {
+            opacity: 1;
+            visibility: visible;
+            right: 85px;
+        }
+        
+        /* ANIMACIÓN DE PULSO */
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+        
+        /* RESPONSIVE - MÁS GRANDE EN MÓVIL */
+        @media (max-width: 768px) {
+            .whatsapp-btn {
+                width: 75px;
+                height: 75px;
+                bottom: 30px;
+                right: 30px;
+            }
+            
+            .whatsapp-btn i {
+                font-size: 40px;
+            }
+            
+            .whatsapp-text {
+                font-size: 16px;
+                padding: 14px 20px;
+                right: 90px;
+            }
+            
+            .whatsapp-btn:hover .whatsapp-text {
+                right: 95px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .whatsapp-container {
+                bottom: 20px;
+                right: 20px;
+            }
+            
+            .whatsapp-btn {
+                width: 80px;
+                height: 80px;
+            }
+            
+            .whatsapp-btn i {
+                font-size: 42px;
+            }
+            
+            /* En móviles muy pequeños, ocultar texto */
+            .whatsapp-text {
+                display: none;
+            }
+        }
+        
+        /* PARA PANTALLAS GRANDES */
+        @media (min-width: 1024px) {
+            .whatsapp-btn {
+                width: 65px;
+                height: 65px;
+            }
+            
+            .whatsapp-btn i {
+                font-size: 34px;
+            }
+        }
+        
+        /* BOTÓN CON CONTADOR DE MENSAJES (OPCIONAL) */
+        .whatsapp-notification {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background: #FF3B30;
+            color: white;
+            font-size: 12px;
+            font-weight: bold;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid white;
+        }
+    </style>
+</head>
+<body>    
+    <!-- BOTÓN DE WHATSAPP -->
+    <div class="whatsapp-container">
+        <a href="https://wa.me/526643331400?text=Hola,%20me%20gustaría%20más%20información" 
+           class="whatsapp-btn" 
+           target="_blank"
+           aria-label="Contactar por WhatsApp">
+           
+            <i class="fab fa-whatsapp"></i>
+            
+            <!-- Texto flotante (opcional) -->
+            <span class="whatsapp-text">¡Escríbeme!</span>
+            
+            <!-- Notificación (opcional) -->
+            <!-- <span class="whatsapp-notification">3</span> -->
+        </a>
+    </div>
+
+    <script>
+        // Código para mostrar/ocultar texto en móvil al tocar
+        document.addEventListener('DOMContentLoaded', function() {
+            const whatsappBtn = document.querySelector('.whatsapp-btn');
+            const whatsappText = document.querySelector('.whatsapp-text');
+            
+            // Para móviles: mostrar texto al tocar
+            if ('ontouchstart' in window) {
+                let touchTimer;
+                
+                whatsappBtn.addEventListener('touchstart', function(e) {
+                    e.preventDefault();
+                    touchTimer = setTimeout(() => {
+                        if (whatsappText.style.display !== 'block') {
+                            whatsappText.style.display = 'block';
+                            whatsappText.style.opacity = '1';
+                            whatsappText.style.visibility = 'visible';
+                        }
+                    }, 300); // Mostrar después de 300ms de toque largo
+                });
+                
+                whatsappBtn.addEventListener('touchend', function(e) {
+                    clearTimeout(touchTimer);
+                });
+                
+                // Ocultar texto al tocar fuera
+                document.addEventListener('touchstart', function(e) {
+                    if (!whatsappBtn.contains(e.target)) {
+                        whatsappText.style.display = '';
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
+    
+
     <!-- About Seller Section -->
     <section class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -96,17 +337,11 @@
                     </div>
 
                     <p class="text-gray-700 text-lg mb-6 leading-relaxed">
-                        Con más de 15 años de experiencia en el mercado inmobiliario de Rosarito, me especializo en 
-                        conectar compradores internacionales con oportunidades premium de terrenos costeros. Mi profundo 
-                        conocimiento de la región, combinado con un compromiso de servicio personalizado, asegura que 
-                        cada cliente encuentre la propiedad perfecta para su visión.
+                        Psicóloga con más de 6 años de experiencia en el sector inmobiliario, especializada en terrenos de Tijuana y Rosarito. Combino mi formación en psicología con un profundo conocimiento del mercado para comprender tus objetivos y guiarte con claridad y honestidad. Cuento con una trayectoria respaldada por clientes internacionales, a quienes he acompañado en la adquisición segura de terrenos costeros y con vistas panorámicas.
                     </p>
 
                     <p class="text-gray-700 text-lg mb-8 leading-relaxed">
-                        He ayudado a cientos de familias e inversionistas a descubrir la belleza y el potencial de la 
-                        costa de Rosarito. Desde parcelas frente al mar hasta lotes en colinas con vistas panorámicas 
-                        al océano, guío a mis clientes a través de cada paso del proceso de adquisición con transparencia 
-                        y experiencia.
+                        Mi compromiso es ofrecer un servicio profesional, humano y transparente, construyendo relaciones de confianza para materializar tu proyecto de inversión o patrimonio.
                     </p>
 
                     <div class="grid grid-cols-2 gap-6">
@@ -116,7 +351,7 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
                                 </svg>
                             </div>
-                            <h4 class="text-3xl font-bold text-green-700 mb-1">15+</h4>
+                            <h4 class="text-3xl font-bold text-green-700 mb-1">6+</h4>
                             <p class="text-gray-600">Años de Experiencia</p>
                         </div>
 
@@ -279,7 +514,7 @@
                     <!-- Beachfront Parcels -->
                     <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow">
                         <div class="relative h-64">
-                            <img src="Src/lote2.jpg"
+                            <img src="Src/lote1.jpg"
                                 alt="Parcelas Frente al Mar"
                                 class="w-full h-full object-cover">
                             <div class="absolute top-4 left-4 bg-green-600 text-white p-3 rounded-lg">
@@ -331,7 +566,7 @@
                     <!-- Hillside Lots -->
                     <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow">
                         <div class="relative h-64">
-                            <img src="Src/lote1.jpg"
+                            <img src="Src/lote2.jpg"
                                 alt="Lotes en Colina"
                                 class="w-full h-full object-cover">
                             <div class="absolute top-4 left-4 bg-green-600 text-white p-3 rounded-lg">
@@ -383,7 +618,7 @@
                     <!-- Development Land -->
                     <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow">
                         <div class="relative h-64">
-                            <img src="Src/lote1.jpg"
+                            <img src="Src/lote3.jpg"
                                 alt="Terrenos de Desarrollo"
                                 class="w-full h-full object-cover">
                             <div class="absolute top-4 left-4 bg-green-600 text-white p-3 rounded-lg">
@@ -579,11 +814,11 @@
                             </div>
                             <div>
                                 <h3 class="text-lg font-semibold mb-1">Teléfono</h3>
-                                <p class="text-gray-600">+52 (664) 123-4567</p>
-                                <p class="text-gray-600">+1 (619) 987-6543</p>
+                                <p class="text-gray-600">+52 1 664 333 1400</p>
                             </div>
                         </div>
 
+                        <!-- 
                         <div class="flex items-start gap-4">
                             <div class="bg-green-100 p-3 rounded-lg">
                                 <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -620,6 +855,7 @@
                                 <p class="text-gray-600">Lun - Vie: 9:00 AM - 6:00 PM<br>Sáb: 10:00 AM - 4:00 PM<br>Dom: Con cita previa</p>
                             </div>
                         </div>
+                        -->
                     </div>
                 </div>
 
