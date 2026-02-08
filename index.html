@@ -418,8 +418,9 @@
                                 </div>
                             </div>
 
-                            <button class="w-full mt-8 bg-green-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-green-700 transition-colors">
-                                Conoce Más
+                            <button class="w-full mt-8 bg-green-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-green-700 transition-colors"
+                            onclick="abrirModal('vista-mar')">
+                            Conoce Más
                             </button>
                         </div>
                     </div>
@@ -485,8 +486,9 @@
                                 </div>
                             </div>
 
-                            <button class="w-full mt-8 bg-green-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-green-700 transition-colors">
-                                Conoce Más
+                            <button class="w-full mt-8 bg-green-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-green-700 transition-colors"
+                            onclick="abrirModal('zona-costera')">
+                            Conoce Más
                             </button>
                         </div>
                     </div>
@@ -534,8 +536,9 @@
                                 </div>
                             </div>
 
-                            <button class="w-full mt-8 bg-green-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-green-700 transition-colors">
-                                Conoce Más
+                            <button class="w-full mt-8 bg-green-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-green-700 transition-colors"
+                            onclick="abrirModal('urbanizados')">
+                            Conoce Más
                             </button>
                         </div>
                     </div>
@@ -772,5 +775,389 @@
             </div>
         </div>
     </section>
+    <!-- ====== MODAL DETALLES LOTE ====== -->
+<div id="loteModal" class="fixed inset-0 bg-black bg-opacity-50 z-[10000] hidden items-center justify-center p-4">
+    <div class="bg-white rounded-2xl shadow-2xl max-w-6xl w-full max-h-[90vh] overflow-hidden flex flex-col">
+        <!-- HEADER DEL MODAL -->
+        <div class="flex justify-between items-center p-6 border-b border-gray-200 bg-gradient-to-r from-green-600 to-emerald-600 text-white">
+            <div>
+                <h2 class="text-2xl md:text-3xl font-bold" id="modalTitle">Lote con Vista al Mar</h2>
+                <p class="text-green-100" id="modalSubtitle">Hacienda Calafia, Rosarito</p>
+            </div>
+            <button onclick="cerrarModal()" class="text-white hover:text-green-200 text-3xl p-2 rounded-full hover:bg-white/10 transition-colors">
+                &times;
+            </button>
+        </div>
+
+        <!-- CONTENIDO DEL MODAL - SCROLLABLE -->
+        <div class="overflow-y-auto flex-1 p-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- COLUMNA IZQUIERDA: Mapa y Galería -->
+                <div class="space-y-6">
+                    <!-- GOOGLE MAPS -->
+                    <div class="bg-gray-100 rounded-xl overflow-hidden border border-gray-300">
+                        <div class="p-4 bg-green-50 border-b border-gray-300">
+                            <h3 class="text-xl font-bold text-green-800">Ubicación en Mapa</h3>
+                        </div>
+                        <div class="h-[300px]">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3356.123456789012!2d-117.123456!3d32.123456!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d94d123456789%3A0xabcdef123456789!2sRosarito%2C+Baja+California%2C+M%C3%A9xico!5e0!3m2!1ses-419!2smx!4v1234567890123!5m2!1ses-419!2smx"
+                                width="100%" 
+                                height="100%" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade"
+                                class="w-full h-full">
+                            </iframe>
+                        </div>
+                    </div>
+
+                    <!-- GALERÍA DE IMÁGENES -->
+                    <div class="bg-white rounded-xl border border-gray-300 overflow-hidden">
+                        <div class="p-4 bg-green-50 border-b border-gray-300">
+                            <h3 class="text-xl font-bold text-green-800">Galería del Terreno</h3>
+                        </div>
+                        <div class="p-4">
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="aspect-square rounded-lg overflow-hidden">
+                                    <img src="Src/lote1.jpg" alt="Vista 1" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                                </div>
+                                <div class="aspect-square rounded-lg overflow-hidden">
+                                    <img src="Src/lote2.jpg" alt="Vista 2" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                                </div>
+                                <div class="aspect-square rounded-lg overflow-hidden">
+                                    <img src="Src/lote3.jpg" alt="Vista 3" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                                </div>
+                                <div class="aspect-square rounded-lg overflow-hidden bg-green-100 flex items-center justify-center">
+                                    <div class="text-center">
+                                        <svg class="w-12 h-12 text-green-600 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                                        </svg>
+                                        <p class="text-sm text-green-700 font-medium">+3 Fotos más</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- COLUMNA DERECHA: Detalles y Contacto -->
+                <div class="space-y-6">
+                    <!-- INFORMACIÓN PRINCIPAL -->
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-green-50 p-4 rounded-xl border border-green-200">
+                            <div class="flex items-center gap-3 mb-2">
+                                <div class="bg-green-100 p-2 rounded-lg">
+                                    <svg class="w-6 h-6 text-green-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                </div>
+                                <span class="text-sm font-medium text-gray-600">Precio</span>
+                            </div>
+                            <p class="text-2xl font-bold text-green-800" id="modalPrecio">$150,000 USD</p>
+                            <p class="text-sm text-gray-600 mt-1">Desde</p>
+                        </div>
+
+                        <div class="bg-green-50 p-4 rounded-xl border border-green-200">
+                            <div class="flex items-center gap-3 mb-2">
+                                <div class="bg-green-100 p-2 rounded-lg">
+                                    <svg class="w-6 h-6 text-green-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5v-4m0 4h-4m4 0l-5-5"></path>
+                                    </svg>
+                                </div>
+                                <span class="text-sm font-medium text-gray-600">Área</span>
+                            </div>
+                            <p class="text-2xl font-bold text-green-800" id="modalArea">300 m²</p>
+                            <p class="text-sm text-gray-600 mt-1">Mínimo disponible</p>
+                        </div>
+
+                        <div class="bg-green-50 p-4 rounded-xl border border-green-200">
+                            <div class="flex items-center gap-3 mb-2">
+                                <div class="bg-green-100 p-2 rounded-lg">
+                                    <svg class="w-6 h-6 text-green-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                    </svg>
+                                </div>
+                                <span class="text-sm font-medium text-gray-600">Ubicación</span>
+                            </div>
+                            <p class="text-lg font-bold text-green-800" id="modalUbicacion">Hacienda Calafia</p>
+                            <p class="text-sm text-gray-600 mt-1">Rosarito, BC</p>
+                        </div>
+
+                        <div class="bg-green-50 p-4 rounded-xl border border-green-200">
+                            <div class="flex items-center gap-3 mb-2">
+                                <div class="bg-green-100 p-2 rounded-lg">
+                                    <svg class="w-6 h-6 text-green-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                                    </svg>
+                                </div>
+                                <span class="text-sm font-medium text-gray-600">Estado</span>
+                            </div>
+                            <p class="text-lg font-bold text-green-800" id="modalEstado">Disponible</p>
+                            <p class="text-sm text-gray-600 mt-1">Entrega inmediata</p>
+                        </div>
+                    </div>
+
+                    <!-- CARACTERÍSTICAS PRINCIPALES -->
+                    <div class="bg-white rounded-xl border border-gray-300">
+                        <div class="p-4 bg-green-50 border-b border-gray-300">
+                            <h3 class="text-xl font-bold text-green-800">Características Principales</h3>
+                        </div>
+                        <div class="p-4">
+                            <div class="grid grid-cols-2 gap-3" id="modalCaracteristicas">
+                                <div class="flex items-center gap-3 p-3 bg-green-50 rounded-lg">
+                                    <svg class="w-5 h-5 text-green-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                    <span class="text-gray-700">Vista panorámica al mar</span>
+                                </div>
+                                <div class="flex items-center gap-3 p-3 bg-green-50 rounded-lg">
+                                    <svg class="w-5 h-5 text-green-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                    <span class="text-gray-700">Acceso pavimentado</span>
+                                </div>
+                                <div class="flex items-center gap-3 p-3 bg-green-50 rounded-lg">
+                                    <svg class="w-5 h-5 text-green-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                    <span class="text-gray-700">Servicios disponibles</span>
+                                </div>
+                                <div class="flex items-center gap-3 p-3 bg-green-50 rounded-lg">
+                                    <svg class="w-5 h-5 text-green-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                    <span class="text-gray-700">Escrituración garantizada</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- DESCRIPCIÓN DETALLADA -->
+                    <div class="bg-white rounded-xl border border-gray-300">
+                        <div class="p-4 bg-green-50 border-b border-gray-300">
+                            <h3 class="text-xl font-bold text-green-800">Descripción del Terreno</h3>
+                        </div>
+                        <div class="p-4">
+                            <p class="text-gray-700 leading-relaxed" id="modalDescripcion">
+                                Terreno premium con vista espectacular al Océano Pacífico, ubicado en el exclusivo fraccionamiento Hacienda Calafia. 
+                                Cuenta con todos los servicios urbanos, acceso controlado y seguridad 24/7. Ideal para construcción de residencia 
+                                vacacional o inversión a largo plazo con alta plusvalía garantizada.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- INTERESADO EN ESTA PROPIEDAD -->
+                    <div class="bg-gradient-to-r from-green-600 to-emerald-600 rounded-xl p-6 text-white">
+                        <h3 class="text-xl font-bold mb-4">¿Interesado en esta propiedad?</h3>
+                        <p class="text-green-100 mb-6">Contáctame ahora para agendar una visita o recibir más información personalizada.</p>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <!-- BOTÓN LLAMAR AHORA -->
+                            <a href="tel:+526643331400" 
+                               class="bg-white text-green-700 font-bold py-3 px-6 rounded-lg hover:bg-green-50 transition-colors flex items-center justify-center gap-3">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                                </svg>
+                                Llamar Ahora
+                            </a>
+                            
+                            <!-- BOTÓN ENVIAR EMAIL -->
+                            <a href="#contacto" 
+                               onclick="cerrarModal()"
+                               class="bg-emerald-700 text-white font-bold py-3 px-6 rounded-lg hover:bg-emerald-800 transition-colors flex items-center justify-center gap-3">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
+                                Enviar Email
+                            </a>
+                        </div>
+                        
+                        <div class="mt-6 pt-6 border-t border-green-500">
+                            <p class="text-green-100 text-sm">
+                                <strong>Respuesta en menos de 24 horas:</strong> Araceli te contactará personalmente para resolver todas tus dudas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- CSS PARA EL MODAL -->
+<style>
+/* Animaciones para el modal */
+#loteModal {
+    animation: fadeIn 0.3s ease-out;
+}
+
+#loteModal > div {
+    animation: slideUp 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Scroll personalizado para el modal */
+#loteModal > div > div {
+    scrollbar-width: thin;
+    scrollbar-color: #10B981 #F3F4F6;
+}
+
+#loteModal > div > div::-webkit-scrollbar {
+    width: 8px;
+}
+
+#loteModal > div > div::-webkit-scrollbar-track {
+    background: #F3F4F6;
+    border-radius: 4px;
+}
+
+#loteModal > div > div::-webkit-scrollbar-thumb {
+    background-color: #10B981;
+    border-radius: 4px;
+}
+</style>
+
+<!-- JAVASCRIPT PARA EL MODAL -->
+<script>
+// Datos de ejemplo para cada tipo de lote
+const lotesData = {
+    "vista-mar": {
+        title: "Lotes con Vista al Mar",
+        subtitle: "Hacienda Calafia, Rosarito",
+        precio: "$150,000 USD",
+        area: "300 m²",
+        ubicacion: "Hacienda Calafia",
+        estado: "Disponible",
+        descripcion: "Terreno premium con vista espectacular al Océano Pacífico, ubicado en el exclusivo fraccionamiento Hacienda Calafia. Cuenta con todos los servicios urbanos, acceso controlado y seguridad 24/7.",
+        caracteristicas: [
+            "Vista panorámica al mar",
+            "Acceso pavimentado",
+            "Servicios disponibles",
+            "Escrituración garantizada",
+            "Seguridad 24/7",
+            "Plusvalía garantizada"
+        ]
+    },
+    "zona-costera": {
+        title: "Lotes Zona Costera",
+        subtitle: "Mar de Popotla, Rosarito",
+        precio: "$100,000 USD",
+        area: "250 m²",
+        ubicacion: "Mar de Popotla",
+        estado: "Disponible",
+        descripcion: "Excelentes terrenos cercanos al mar con gran potencial de inversión. Ubicados a solo 5 minutos de la playa, con todos los servicios básicos disponibles.",
+        caracteristicas: [
+            "A 5 min de la playa",
+            "Servicios básicos",
+            "Acceso fácil",
+            "Zona en desarrollo",
+            "Alta plusvalía",
+            "Financiamiento disponible"
+        ]
+    },
+    "urbanizados": {
+        title: "Lotes Urbanizados",
+        subtitle: "Vista Horizonte, Tijuana",
+        precio: "$85,000 USD",
+        area: "200 m²",
+        ubicacion: "Vista Horizonte",
+        estado: "Disponible",
+        descripcion: "Terrenos completamente urbanizados en zona residencial de Tijuana. Ideales para construcción inmediata con todos los servicios municipales.",
+        caracteristicas: [
+            "Totalmente urbanizado",
+            "Servicios completos",
+            "Zona residencial",
+            "Permisos de construcción",
+            "Cerca de escuelas",
+            "Transporte público"
+        ]
+    }
+};
+
+// Función para abrir el modal con datos específicos
+function abrirModal(tipoLote) {
+    const modal = document.getElementById('loteModal');
+    const data = lotesData[tipoLote] || lotesData["vista-mar"];
+    
+    // Actualizar datos en el modal
+    document.getElementById('modalTitle').textContent = data.title;
+    document.getElementById('modalSubtitle').textContent = data.subtitle;
+    document.getElementById('modalPrecio').textContent = data.precio;
+    document.getElementById('modalArea').textContent = data.area;
+    document.getElementById('modalUbicacion').textContent = data.ubicacion;
+    document.getElementById('modalEstado').textContent = data.estado;
+    document.getElementById('modalDescripcion').textContent = data.descripcion;
+    
+    // Actualizar características
+    const caracteristicasContainer = document.getElementById('modalCaracteristicas');
+    caracteristicasContainer.innerHTML = '';
+    data.caracteristicas.forEach(caracteristica => {
+        const div = document.createElement('div');
+        div.className = 'flex items-center gap-3 p-3 bg-green-50 rounded-lg';
+        div.innerHTML = `
+            <svg class="w-5 h-5 text-green-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span class="text-gray-700">${caracteristica}</span>
+        `;
+        caracteristicasContainer.appendChild(div);
+    });
+    
+    // Mostrar modal
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+    document.body.style.overflow = 'hidden';
+}
+
+// Función para cerrar el modal
+function cerrarModal() {
+    const modal = document.getElementById('loteModal');
+    modal.classList.remove('flex');
+    modal.classList.add('hidden');
+    document.body.style.overflow = 'auto';
+}
+
+// Cerrar modal al hacer clic fuera del contenido
+document.getElementById('loteModal').addEventListener('click', function(e) {
+    if (e.target.id === 'loteModal') {
+        cerrarModal();
+    }
+});
+
+// Cerrar modal con tecla ESC
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        cerrarModal();
+    }
+});
+
+// Inicializar: Agregar eventos a los botones "Conoce Más"
+document.addEventListener('DOMContentLoaded', function() {
+    // Encontrar todos los botones "Conoce Más" (ajusta según tus selectores)
+    const buttons = document.querySelectorAll('button.bg-green-600.text-white');
+    
+    buttons.forEach((button, index) => {
+        // Asignar tipo de lote según la posición (puedes personalizar esto)
+        let tipoLote = "vista-mar";
+        if (index === 1) tipoLote = "zona-costera";
+        if (index === 2) tipoLote = "urbanizados";
+        
+        button.setAttribute('onclick', `abrirModal('${tipoLote}')`);
+    });
+});
+</script>
+<!-- ====== FIN MODAL DETALLES LOTE ====== -->
 </body>
 </html>
