@@ -406,7 +406,7 @@
                             <div class="mt-4 p-4 bg-green-50 rounded-lg border border-green-200">
                                 <div class="flex justify-between items-center mb-2">
                                     <span class="text-lg font-bold text-green-700">Desde</span>
-                                    <span class="text-2xl font-bold text-green-800">$100,000 USD</span>
+                                    <span class="text-2xl font-bold text-green-800">$28,000 USD</span>
                                 </div>
                                 <div class="text-sm text-gray-600 space-y-1">
                                     <div class="flex items-center gap-2">
@@ -474,7 +474,7 @@
                             <div class="mt-4 p-4 bg-green-50 rounded-lg border border-green-200">
                                 <div class="flex justify-between items-center mb-2">
                                     <span class="text-lg font-bold text-green-700">Desde</span>
-                                    <span class="text-2xl font-bold text-green-800">$100,000 USD</span>
+                                    <span class="text-2xl font-bold text-green-800">$30,000 USD</span>
                                 </div>
                                 <div class="text-sm text-gray-600 space-y-1">
                                     <div class="flex items-center gap-2">
@@ -524,7 +524,7 @@
                             <div class="mt-4 p-4 bg-green-50 rounded-lg border border-green-200">
                                 <div class="flex justify-between items-center mb-2">
                                     <span class="text-lg font-bold text-green-700">Desde</span>
-                                    <span class="text-2xl font-bold text-green-800">$100,000 USD</span>
+                                    <span class="text-2xl font-bold text-green-800">$15,000 USD</span>
                                 </div>
                                 <div class="text-sm text-gray-600 space-y-1">
                                     <div class="flex items-center gap-2">
@@ -795,40 +795,31 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
                 <!-- COLUMNA IZQUIERDA: Mapa y Galería -->
                 <!-- GOOGLE MAPS - VERSIÓN RESPONSIVE -->
+<!-- GOOGLE MAPS - VERSIÓN MEJORADA -->
 <div class="bg-gray-100 rounded-xl overflow-hidden border border-gray-300">
-    <div class="p-4 bg-green-50 border-b border-gray-300">
-        <h3 class="text-xl font-bold text-green-800">Ubicación en Mapa</h3>
+    <div class="p-3 sm:p-4 bg-green-50 border-b border-gray-300">
+        <h3 class="text-lg sm:text-xl font-bold text-green-800">📍 Ubicación en Mapa</h3>
     </div>
-    <div class="h-[300px] md:h-[400px] w-full">
-        <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8296.631985242651!2d-117.10607383417515!3d32.509650651048986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d94a379596704b%3A0xf2a8be8c35d471c4!2sHacienda%20Calafia%2C%20Mar%20Vista%2C%2022510%20Tijuana%2C%20B.C.!5e0!3m2!1ses!2smx!4v1770579900847!5m2!1ses!2smx"
-            class="w-full h-full border-0"
-            allowfullscreen 
-            loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
+    <div class="relative w-full" style="padding-bottom: 56.25%;"> <!-- 16:9 Aspect Ratio -->
+        <iframe id="modalMap"
+        src=""
+        class="absolute top-0 left-0 w-full h-full border-0"
+        allowfullscreen 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Mapa del terreno">
+</iframe>
     </div>
 </div>
 
                     <!-- GALERÍA DE IMÁGENES -->
                     <div class="bg-white rounded-xl border border-gray-300 overflow-hidden">
                         <div class="p-3 md:p-4 bg-green-50 border-b border-gray-300">
-                            <h3 class="text-lg md:text-xl font-bold text-green-800">Galería del Terreno</h3>
+                            <h3 class="text-lg md:text-xl font-bold text-green-800">Galería</h3>
                         </div>
                         <div class="p-4">
-                            <div class="grid grid-cols-2 gap-3 md:gap-4">
-                                <div class="aspect-square rounded-lg overflow-hidden cursor-pointer" onclick="abrirImagenModal('Src/lote1.jpg')">
-                                    <img src="Src/lote1.jpg" alt="Vista 1" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-                                </div>
-                                <div class="aspect-square rounded-lg overflow-hidden cursor-pointer" onclick="abrirImagenModal('Src/lote2.jpg')">
-                                    <img src="Src/lote2.jpg" alt="Vista 2" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-                                </div>
-                                <div class="aspect-square rounded-lg overflow-hidden cursor-pointer" onclick="abrirImagenModal('Src/lote3.jpg')">
-                                    <img src="Src/lote3.jpg" alt="Vista 3" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-                                </div>
-                                <div class="aspect-square rounded-lg overflow-hidden cursor-pointer" onclick="abrirImagenModal('Src/lote3.jpg')">
-                                    <img src="Src/lote3.jpg" alt="Vista 3" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-                                </div>
+                            <div class="grid grid-cols-2 gap-4" id="modalGallery">
+                                <!-- Las imágenes se cargarán automáticamente desde el JSON -->
                             </div>
                         </div>
                     </div>
@@ -1034,8 +1025,8 @@ const lotesData = {
     "vista-mar": {
         title: "Lotes con Vista al Mar",
         subtitle: "Hacienda Calafia, Rosarito",
-        precio: "$150,000 USD",
-        area: "300 m²",
+        precio: "$28,800 USD",
+        area: "180 m²",
         ubicacion: "Hacienda Calafia",
         estado: "Disponible",
         descripcion: "Terreno premium con vista espectacular al Océano Pacífico, ubicado en el exclusivo fraccionamiento Hacienda Calafia. Cuenta con todos los servicios urbanos, acceso controlado y seguridad 24/7.",
@@ -1180,6 +1171,452 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+// ============================================
+// JSON EDITABLE - MODIFICA AQUÍ TODOS LOS DATOS
+// ============================================
+const proyectosPorCategoria = {
+    "vista-mar": {
+        tituloCategoria: "Lotes con Vista al Mar",
+        descripcionCategoria: "Máxima exclusividad y alto valor patrimonial.",
+        proyectos: [
+            {
+                id: "hacienda-calafia",
+                nombre: "Hacienda Calafia",
+                precio: "$150,000 USD",
+                area: "300 m²",
+                ubicacion: "Rosarito, BC",
+                estado: "Disponible",
+                descripcion: "Terreno premium con vista espectacular al Océano Pacífico, ubicado en el exclusivo fraccionamiento Hacienda Calafia. Cuenta con todos los servicios urbanos, acceso controlado y seguridad 24/7.",
+                caracteristicas: [
+                    "Vista panorámica al mar",
+                    "Acceso pavimentado",
+                    "Servicios disponibles",
+                    "Escrituración garantizada",
+                    "Seguridad 24/7",
+                    "Plusvalía garantizada"
+                ],
+                galeria: [
+                    "Src/HaciendaCalafia/HaciendaCalafia (1).jpeg",
+                    "Src/HaciendaCalafia/HaciendaCalafia (2).jpeg",
+                    "Src/HaciendaCalafia/HaciendaCalafia (3).jpeg",
+                    "Src/HaciendaCalafia/HaciendaCalafia (4).jpeg"
+                ],
+                mapaCoordenadas: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3365.2387437243186!2d-117.054165284824!3d32.484279981072!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d949f1b4d5e4b5%3A0x9c8d6b7e3a3b3b3b!2sHacienda%20Calafia%2C%20Rosarito!5e0!3m2!1ses!2smx!4v1234567890123!5m2!1ses!2smx",
+                financiamiento: "25% de enganche, entrega inmediata"
+            },
+            {
+                id: "mar-de-calafia",
+                nombre: "Mar de Calafia",
+                precio: "$180,000 USD",
+                area: "350 m²",
+                ubicacion: "Rosarito, BC",
+                estado: "Disponible",
+                descripcion: "Exclusivos lotes con vista directa al mar, en una de las zonas más privilegiadas de Rosarito. Ideal para construcción de residencias de lujo.",
+                caracteristicas: [
+                    "Vista directa al mar",
+                    "Acceso controlado",
+                    "Área comunitaria",
+                    "Servicios completos",
+                    "Zona exclusiva",
+                    "Alta plusvalía"
+                ],
+                galeria: [
+                    "Src/lote1.jpg",
+                    "Src/lote1.jpg",
+                    "Src/lote1.jpg"
+                ],
+                mapaCoordenadas: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6746.172825399817!2d-117.00732120321194!3d32.28265461592804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d92f7182cca1c1%3A0xc55470d8bce6f289!2s22717%20Mar%20de%20Calafia%2C%20Baja%20California!5e0!3m2!1sen!2smx!4v1770586276351!5m2!1sen!2smx",
+                financiamiento: "30% de enganche, financiamiento disponible"
+            },
+            {
+                id: "Puerto Nuevo 1",
+                nombre: "Puerto Nuevo 1",
+                precio: "$150,000 USD",
+                area: "300 m²",
+                ubicacion: "Rosarito, BC",
+                estado: "Disponible",
+                descripcion: "Terreno premium con vista espectacular al Océano Pacífico, ubicado en el exclusivo fraccionamiento Hacienda Calafia. Cuenta con todos los servicios urbanos, acceso controlado y seguridad 24/7.",
+                caracteristicas: [
+                    "Vista panorámica al mar",
+                    "Acceso pavimentado",
+                    "Servicios disponibles",
+                    "Escrituración garantizada",
+                    "Seguridad 24/7",
+                    "Plusvalía garantizada"
+                ],
+                galeria: [
+                    "Src/lote1.jpg",
+                    "Src/lote1.jpg",
+                    "Src/lote1.jpg"
+                ],
+                mapaCoordenadas: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8565.135462778995!2d-116.93985943512034!3d32.24132777052554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d926f387e5268f%3A0xf2e0b0f916f73cba!2s22740%20Puerto%20Nuevo%2C%20Baja%20California!5e0!3m2!1sen!2smx!4v1770586412194!5m2!1sen!2smx",
+                financiamiento: "25% de enganche, entrega inmediata"
+            },
+            {
+                id: "Puerto Nuevo 2",
+                nombre: "Puerto Nuevo 2",
+                precio: "$160,000 USD",
+                area: "320 m²",
+                ubicacion: "Rosarito, BC",
+                estado: "Disponible",
+                descripcion: "Terreno premium con vista espectacular al Océano Pacífico, ubicado en el exclusivo fraccionamiento Hacienda Calafia. Cuenta con todos los servicios urbanos, acceso controlado y seguridad 24/7.",
+                caracteristicas: [
+                    "Vista panorámica al mar",
+                    "Acceso pavimentado",
+                    "Servicios disponibles",
+                    "Escrituración garantizada",
+                    "Seguridad 24/7",
+                    "Plusvalía garantizada"
+                ],
+                galeria: [
+                    "Src/lote1.jpg",
+                    "Src/lote1.jpg",
+                    "Src/lote1.jpg"
+                ],
+                mapaCoordenadas: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13891.922396206504!2d-116.91924694059094!3d32.255077382363055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d927004388b97b%3A0xbd599923ded5699e!2spuerto%20nuevo%20dos!5e0!3m2!1sen!2smx!4v1770587193141!5m2!1sen!2smx",
+                financiamiento: "25% de enganche, entrega inmediata"
+            },
+            {
+                id: "San Marino",
+                nombre: "San Marino",
+                precio: "$100,000 USD",
+                area: "350 m²",
+                ubicacion: "Rosarito, BC",
+                estado: "Disponible",
+                descripcion: "Terreno premium con vista espectacular al Océano Pacífico, ubicado en el exclusivo fraccionamiento Hacienda Calafia. Cuenta con todos los servicios urbanos, acceso controlado y seguridad 24/7.",
+                caracteristicas: [
+                    "Vista panorámica al mar",
+                    "Acceso pavimentado",
+                    "Servicios disponibles",
+                    "Escrituración garantizada",
+                    "Seguridad 24/7",
+                    "Plusvalía garantizada"
+                ],
+                galeria: [
+                    "Src/lote1.jpg",
+                    "Src/lote1.jpg",
+                    "Src/lote1.jpg"
+                ],
+                mapaCoordenadas: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13472.395198821265!2d-117.09471578017471!3d32.41651149514091!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d9341880772099%3A0x52ed403cf3c747f3!2s22567%20San%20Marino%2C%20Baja%20California!5e0!3m2!1sen!2smx!4v1770586958663!5m2!1sen!2smx",
+                financiamiento: "20% de enganche"
+            }
+            // Puedes agregar más proyectos aqui
+        ]
+    },
+    
+    "zona-costera": {
+        tituloCategoria: "Lotes Zona Costera (Cercanos al Mar)",
+        descripcionCategoria: "Excelente equilibrio entre vista, ubicación y plusvalía.",
+        proyectos: [
+            {
+                id: "mar-de-popotla",
+                nombre: "Mar de Popotla",
+                precio: "$100,000 USD",
+                area: "250 m²",
+                ubicacion: "Popotla, Rosarito",
+                estado: "Disponible",
+                descripcion: "Lotes cercanos al mar en la famosa zona de Popotla, conocida por sus restaurantes de langosta y ambiente familiar.",
+                caracteristicas: [
+                    "A 5 min de la playa",
+                    "Zona comercial cercana",
+                    "Servicios básicos",
+                    "Acceso fácil",
+                    "Ambiente familiar",
+                    "Alta rentabilidad"
+                ],
+                galeria: [
+                    "Src/lote1.jpg",
+                    "Src/lote2.jpg",
+                    "Src/lote3.jpg"
+                ],
+                mapaCoordenadas: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26983.255520635954!2d-117.03276965572982!3d32.287479857834924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d92f0a64694841%3A0x16628b1a338c7ffa!2s22716%20Mar%20de%20Popotla%2C%20Baja%20California!5e0!3m2!1sen!2smx!4v1770587031442!5m2!1sen!2smx",
+                financiamiento: "20% de enganche, planes flexibles"
+            },
+            {
+                id: "mision-del-mar-2",
+                nombre: "Misión del Mar 2",
+                precio: "$120,000 USD",
+                area: "280 m²",
+                ubicacion: "Rosarito, BC",
+                estado: "Disponible",
+                descripcion: "Segunda etapa del exitoso desarrollo Misión del Mar, con lotes más amplios y mejores amenidades.",
+                caracteristicas: [
+                    "Áreas verdes",
+                    "Cerca de escuela",
+                    "Calles pavimentadas",
+                    "Alumbrado público",
+                    "Parques infantiles",
+                    "Zona en crecimiento"
+                ],
+                galeria: [
+                    "Src/lote1.jpg",
+                    "Src/lote2.jpg",
+                    "Src/lote3.jpg"
+                ],
+                mapaCoordenadas: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9960.618428268526!2d-117.0326429887522!3d32.30363645956471!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d92fb6633d5f2f%3A0x58139832ded8fc91!2sMision%20Del%20Mar%202!5e0!3m2!1sen!2smx!4v1770587070792!5m2!1sen!2smx",
+                financiamiento: "25% de enganche, entrega inmediata"
+            },
+            {
+                id: "campo-real",
+                nombre: "Campo Real",
+                precio: "$22,000 USD",
+                area: "200 m²",
+                ubicacion: "Tijuana, BC",
+                estado: "Disponible",
+                descripcion: "Segunda etapa del exitoso desarrollo Misión del Mar, con lotes más amplios y mejores amenidades.",
+                caracteristicas: [
+                    "Áreas verdes",
+                    "Cerca de escuela",
+                    "Calles pavimentadas",
+                    "Alumbrado público",
+                    "Parques infantiles",
+                    "Zona en crecimiento"
+                ],
+                galeria: [
+                    "Src/CampoReal/CampoReal (1).jpeg",
+                    "Src/CampoReal/CampoReal (2).jpeg",
+                    "Src/CampoReal/CampoReal (3).jpeg",
+                    "Src/CampoReal/CampoReal (4).jpeg"
+                ],
+                mapaCoordenadas: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6748.33494712843!2d-116.90961855000002!3d32.25357595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d926bea5021291%3A0xc85c33c02b524ce4!2s22740%20Campo%20Real%2C%20Baja%20California!5e0!3m2!1sen!2smx!4v1770587250179!5m2!1sen!2smx",
+                financiamiento: "2,200 USD de enganche"
+            },
+            {
+                id: "Lomas de Canta Mar",
+                nombre: "Lomas de Canta Mar",
+                precio: "$180,000 USD",
+                area: "350 m²",
+                ubicacion: "Tijuana, BC",
+                estado: "Disponible",
+                descripcion: "Segunda etapa del exitoso desarrollo Misión del Mar, con lotes más amplios y mejores amenidades.",
+                caracteristicas: [
+                    "Áreas verdes",
+                    "Cerca de escuela",
+                    "Calles pavimentadas",
+                    "Alumbrado público",
+                    "Parques infantiles",
+                    "Zona en crecimiento"
+                ],
+                galeria: [
+                    "Src/lote1.jpg",
+                    "Src/lote2.jpg",
+                    "Src/lote3.jpg"
+                ],
+                mapaCoordenadas: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6749.0477776042!2d-116.92178865321614!3d32.24398386986077!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d926ea5ad12c21%3A0x25c34fa5f9267f92!2s22740%20Lomas%20de%20Cantamar%2C%20Baja%20California!5e0!3m2!1sen!2smx!4v1770587303808!5m2!1sen!2smx",
+                financiamiento: "25% de enganche, entrega inmediata"
+            }
+
+            // Agrega mas proyectos zona costera aquí
+        ]
+    },
+    
+    "urbanizados": {
+        tituloCategoria: "Lotes urbanizados (Tijuana)",
+        descripcionCategoria: "Terrenos elevados con gran proyección y entorno privilegiado.",
+        proyectos: [
+            {
+                id: "vista-horizonte",
+                nombre: "Vista Horizonte",
+                precio: "$85,000 USD",
+                area: "200 m²",
+                ubicacion: "Tijuana, BC",
+                estado: "Disponible",
+                descripcion: "Lotes completamente urbanizados en zona residencial de Tijuana, con todos los servicios y permisos de construcción.",
+                caracteristicas: [
+                    "Totalmente urbanizado",
+                    "Servicios completos",
+                    "Zona residencial",
+                    "Permisos de construcción",
+                    "Cerca de escuelas",
+                    "Transporte público"
+                ],
+                galeria: [
+                    "Src/lote1.jpg",
+                    "Src/lote2.jpg",
+                    "Src/lote3.jpg"
+                ],
+                mapaCoordenadas: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3365.2387437243186!2d-117.054165284824!3d32.484279981072!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d949f1b4d5e4b5%3A0x9c8d6b7e3a3b3b3b!2sVista%20Horizonte%2C%20Tijuana!5e0!3m2!1ses!2smx!4v1234567890123!5m2!1ses!2smx",
+                financiamiento: "15% de enganche, crédito bancario"
+            }
+            // Puedes agregar más proyectos urbanizados aquí
+        ]
+    }
+};
+
+// ============================================
+// FUNCIONES PRINCIPALES
+// ============================================
+
+// Variable global para controlar qué proyecto está activo
+let proyectoActual = null;
+
+// Función para abrir modal con lista de proyectos
+function abrirModal(categoria) {
+    const categoriaData = proyectosPorCategoria[categoria];
+    if (!categoriaData) return;
+    
+    // Mostrar el primer proyecto de la categoría por defecto
+    if (categoriaData.proyectos.length > 0) {
+        mostrarProyecto(categoriaData.proyectos[0]);
+    }
+    
+    // Actualizar selector de proyectos si hay más de uno
+    actualizarSelectorProyectos(categoria);
+    
+    // Mostrar modal
+    const modal = document.getElementById('loteModal');
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+    document.body.style.overflow = 'hidden';
+}
+
+// Función para mostrar un proyecto específico en el modal
+function mostrarProyecto(proyecto) {
+    proyectoActual = proyecto;
+    
+    // Actualizar datos en el modal
+    document.getElementById('modalTitle').textContent = proyecto.nombre;
+    document.getElementById('modalSubtitle').textContent = proyecto.ubicacion;
+    document.getElementById('modalPrecio').textContent = proyecto.precio;
+    document.getElementById('modalArea').textContent = proyecto.area;
+    document.getElementById('modalUbicacion').textContent = proyecto.ubicacion;
+    document.getElementById('modalEstado').textContent = proyecto.estado;
+    document.getElementById('modalDescripcion').textContent = proyecto.descripcion;
+    document.getElementById('modalEstadoEntrega').textContent = proyecto.financiamiento || "Entrega inmediata";
+    
+    // Actualizar características
+    const caracteristicasContainer = document.getElementById('modalCaracteristicas');
+    caracteristicasContainer.innerHTML = '';
+    proyecto.caracteristicas.forEach(caracteristica => {
+        const div = document.createElement('div');
+        div.className = 'flex items-center gap-3 p-3 bg-green-50 rounded-lg';
+        div.innerHTML = `
+            <svg class="w-5 h-5 text-green-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span class="text-gray-700">${caracteristica}</span>
+        `;
+        caracteristicasContainer.appendChild(div);
+    });
+    
+    // Actualizar galería
+    const galeriaContainer = document.getElementById('modalGallery');
+    galeriaContainer.innerHTML = '';
+    proyecto.galeria.forEach((imagen, index) => {
+        const div = document.createElement('div');
+        div.className = 'aspect-square rounded-lg overflow-hidden cursor-pointer';
+        div.onclick = () => abrirImagenModal(imagen);
+        div.innerHTML = `
+            <img src="${imagen}" alt="${proyecto.nombre} - Vista ${index + 1}" 
+                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                onerror="this.src='Src/placeholder.jpg'">
+        `;
+        galeriaContainer.appendChild(div);
+    });
+    
+    // Actualizar mapa
+    const mapaIframe = document.getElementById('modalMap');
+    if (mapaIframe) {
+        mapaIframe.src = proyecto.mapaCoordenadas;
+    }
+}
+
+// Función para actualizar el selector de proyectos en el modal
+function actualizarSelectorProyectos(categoria) {
+    const categoriaData = proyectosPorCategoria[categoria];
+    if (!categoriaData) return;
+    
+    // Crear o actualizar selector
+    let selector = document.getElementById('proyectosSelector');
+    
+    if (!selector) {
+        // Crear selector si no existe
+        const modalHeader = document.querySelector('#loteModal .p-4.md\\:p-6');
+        if (modalHeader) {
+            selector = document.createElement('div');
+            selector.id = 'proyectosSelector';
+            selector.className = 'mt-4 flex flex-wrap gap-2';
+            
+            modalHeader.appendChild(selector);
+        }
+    } else {
+        selector.innerHTML = '';
+    }
+    
+    // Agregar botones para cada proyecto
+    categoriaData.proyectos.forEach(proyecto => {
+        const button = document.createElement('button');
+        button.className = 'px-4 py-2 bg-white/20 backdrop-blur-sm text-white rounded-lg hover:bg-white/30 transition-colors text-sm font-medium';
+        button.textContent = proyecto.nombre;
+        button.onclick = () => mostrarProyecto(proyecto);
+        selector.appendChild(button);
+    });
+}
+
+// Función para abrir imagen ampliada
+function abrirImagenModal(src) {
+    document.getElementById('imagenAmpliada').src = src;
+    document.getElementById('imagenModal').classList.remove('hidden');
+    document.getElementById('imagenModal').classList.add('flex');
+}
+
+// Función para cerrar imagen ampliada
+function cerrarImagenModal() {
+    document.getElementById('imagenModal').classList.remove('flex');
+    document.getElementById('imagenModal').classList.add('hidden');
+}
+
+// Función para cerrar el modal principal
+function cerrarModal() {
+    const modal = document.getElementById('loteModal');
+    modal.classList.remove('flex');
+    modal.classList.add('hidden');
+    document.body.style.overflow = 'auto';
+}
+
+// Inicializar cuando la página cargue
+document.addEventListener('DOMContentLoaded', function() {
+    // Configurar eventos de cierre
+    document.getElementById('loteModal').addEventListener('click', function(e) {
+        if (e.target === this) cerrarModal();
+    });
+    
+    document.getElementById('imagenModal').addEventListener('click', function(e) {
+        if (e.target === this) cerrarImagenModal();
+    });
+    
+    // Cerrar con tecla ESC
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            if (!document.getElementById('imagenModal').classList.contains('hidden')) {
+                cerrarImagenModal();
+            } else {
+                cerrarModal();
+            }
+        }
+    });
+    
+    // Configurar botones de las tarjetas principales
+    const botones = document.querySelectorAll('#tipos-terrenos button.bg-green-600');
+    botones.forEach((boton, index) => {
+        let categoria = '';
+        if (index === 0) categoria = 'vista-mar';
+        if (index === 1) categoria = 'zona-costera';
+        if (index === 2) categoria = 'urbanizados';
+        
+        boton.setAttribute('onclick', `abrirModal('${categoria}')`);
+    });
+});
+
+// Función para compartir proyecto por WhatsApp
+function compartirWhatsApp(proyecto) {
+    const mensaje = `¡Hola! Estoy interesado en el proyecto ${proyecto.nombre} de $${proyecto.precio}. ¿Podrías darme más información?`;
+    const url = `https://wa.me/526643331400?text=${encodeURIComponent(mensaje)}`;
+    window.open(url, '_blank');
+}
+</script>
+
 </script>
 <!-- ====== FIN MODAL DETALLES LOTE ====== -->
 
